@@ -20,7 +20,7 @@ const username = document.getElementById('username')
 const password = document.getElementById('password')
 const submit = document.getElementById('submit-btn')
 
-submit.addEventListener('click', () =>{
+submit.addEventListener('click', (event) =>{
 
     event.preventDefault();
 
@@ -37,10 +37,9 @@ const searchUser = (iusername, ipassword) => {
 
     if(!matchedUser){
         alert("Wrong credentials!😒")
-        console.log("Wrong Credentials!")
     }
     else{
-        alert(`Welcome back ${iusername}😊`)
-        console.log(`Welcome back ${iusername}`)
+        localStorage.setItem("loggedUser", iusername)
+        window.location.href = "welcome.html"
     }
 }

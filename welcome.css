@@ -11,3 +11,6 @@ body{
     height: 100vh;
 }
 
+.logout-btn{
+    margin-top: 20px;
+}
